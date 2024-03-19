@@ -1,0 +1,29 @@
+{% extends "core/home.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="content">
+    <h2>Login Page</h2>
+  </div>
+  <form method="post" class="mt-4">                
+    {% csrf_token %}
+    <div class="mb-3 row">
+      <label for="email" class="col-sm-2 col-form-label">Email:</label>
+      <div class="col-sm-6">
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="password" class="col-sm-2 col-form-label">Password:</label>
+      <div class="col-sm-6">
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <div class="col-sm-10 offset-sm-2">
+        <button type="submit" class="btn btn-lg btn-success">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,177 @@
+{% extends "core/home1.html" %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Contact</title>
+    <style>
+
+    
+      body {
+        background-color: #f8f9fa;
+      }
+      .contact {
+        padding: 80px 0;
+      }
+      .contact h2 {
+        font-size: 36px;
+        color: #343a40;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      .contact p {
+        font-size: 18px;
+        color: #6c757d;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .contact .content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .contact .box {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .contact .box h3 {
+        font-size: 24px;
+        color: #343a40;
+        margin-bottom: 20px;
+      }
+      .contact .box p {
+        font-size: 18px;
+        color: #6c757d;
+        margin-bottom: 0;
+      }
+      .contactForm form {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .contactForm form h3 {
+        font-size: 24px;
+        color: #343a40;
+        margin-bottom: 30px;
+      }
+      .contactForm form .inputBox {
+        margin-bottom: 20px;
+      }
+      .contactForm form .inputBox label {
+        font-size: 18px;
+        color: #343a40;
+        font-weight: 500;
+        margin-bottom: 10px;
+        display: block;
+      }
+      .contactForm form .inputBox input[type="text"],
+      .contactForm form .inputBox textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        color: #6c757d;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        resize: none;
+      }
+      .contactForm form .inputBox input[type="submit"] {
+        background: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+      }
+      .contactForm form .inputBox input[type="submit"]:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body >
+    
+    {% block content %}
+    <section class="contact">
+      <div class="content">
+        
+        <h2>Contact Us</h2>
+        <p>Thanks for your interest! To contact us, please use the form below or simply give us a call.</p>
+      </div>
+    
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <div class="icon"><i class="bi bi-geo-alt"></i></div>
+              <div class="text">
+                <h3>Address</h3>
+                <p>M-arch Building, forth floor, Indeftts.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <div class="icon"><i class="bi bi-telephone"></i></div>
+              <div class="text">
+                <h3>Phone</h3>
+                <p>7755970204</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="box">
+              <div class="icon"><i class="bi bi-envelope"></i></div>
+              <div class="text">
+                <h3>Email</h3>
+                <p>indeftts@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="contactForm">
+                  <form>
+                    <h3>Send Messages</h3>
+                    <div class="inputBox">
+                      <label for="fullname">Full Name</label>
+                      <input type="text" id="fullname" name="fullname" class="form-control" required="required">
+                    </div>
+                    <div class="inputBox">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" class="form-control" required="required">
+                    </div>
+                    <div class="inputBox">
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" class="form-control" required="required"></textarea>
+                    </div>
+                    <div class="inputBox text-center">
+                      <input type="submit" class="btn btn-primary" value="Send">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </section>
+    {% endblock %}
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
